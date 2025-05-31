@@ -22,7 +22,7 @@ function LazyImage(props: any) {
 
     return (
         <div className="relative cursor-pointer hover:-translate-y-3 shadow-xl transition-all rounded-2xl
-            border w-full min-h-[200px] overflow-hidden"
+            border w-full h-[12.5rem] overflow-hidden"
             style={{ borderColor: show ? "transparent" : "#DCDCDC" }}
             onMouseEnter={() => setShowInfo(false)}
             onMouseLeave={() => setShowInfo(true)}

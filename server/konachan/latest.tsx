@@ -23,7 +23,7 @@ router.get("/", async (req, res) => {
             width: item.width,
             purity: (item.rating === "s" ? "sfw" : "nsfw") as Purity,
             sample: item.preview_url,
-            url: item.path,
+            url: item.jpeg_url,
             resolution: `${item.width}x${item.height}`,
         }));
         res.json(result);

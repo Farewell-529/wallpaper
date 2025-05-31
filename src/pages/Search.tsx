@@ -5,7 +5,7 @@ import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { useSource } from "../context/SourceContext";
 import LazyImage from "../components/LazyImage";
 import SwitchSource from "../components/SwitchSource";
-import type { Image, Source } from "../types/images";
+import type { Image} from "../types/images";
 function Search() {
     const navigate = useNavigate();
     const location = useLocation();

@@ -2,6 +2,7 @@ import type { Source } from "../types/images";
 
 // 后端 API 基础地址
 const baseURL = "http://localhost:3001/api";
+// const baseURL = "http://159.65.7.241/3001/api";
 
 // RequestOptions 继承了 fetch 的 RequestInit 类型，
 // 并允许自定义 headers 和 method，方便类型推断和智能提示。

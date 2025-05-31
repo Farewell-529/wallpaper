@@ -78,7 +78,7 @@ function Detail() {
     };
     xhr.onload = () => {
       if (xhr.status === 200) {
-        const blob = xhr.response;
+        // const blob = xhr.response;
         // const imgUrl = URL.createObjectURL(blob);
         setProgress(100);
         setLoading(true);

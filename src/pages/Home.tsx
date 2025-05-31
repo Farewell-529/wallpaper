@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import type { Image, Source } from "../types/images";
+import type { Image } from "../types/images";
 import { getLatestWallhavenApi } from "../api/wallhaven/latest";
 import Carousel from "../components/Carousel";
 import LazyImage from "../components/LazyImage";
@@ -15,6 +15,8 @@ function Home() {
   const [carouselImages, setCarouselImages] = useState<Image[]>([]);
   const { currentSource, setCurrentSource } = useSource();
   const [searchParams] = useSearchParams();
+  const [carouselSet, setCarouselSet] = useState(false); // 新增
+
   // 控制首次加载
   const [ready, setReady] = useState(false);
   const handleImageClick = (id: string, source: string) => {
@@ -51,9 +53,9 @@ function Home() {
     }
     setImages(prev => {
       const newImages = [...prev, ...res];
-      // 只在第一页时设置轮播图
-      if (page === 1) {
+      if (!carouselSet) {
         setCarouselImages(getRandomItems(newImages, 4));
+        setCarouselSet(true);
       }
       return newImages;
     });
@@ -86,7 +88,7 @@ function Home() {
     window.addEventListener('scroll', handleScroll);
     // 返回清理函数
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [currentSource, page,ready]);
+  }, [currentSource, page, ready]);
   return (
     <div className="w-[80rem]  mx-auto">
       <Carousel images={carouselImages} />

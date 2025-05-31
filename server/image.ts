@@ -16,6 +16,7 @@ router.get('/', async (req, res): Promise<void> => {
 
   try {
     const response = await fetch(imageUrl, { agent });
+    // const response = await fetch(imageUrl);
 
     if (!response.ok) {
       res.status(response.status).send("Failed to fetch image");

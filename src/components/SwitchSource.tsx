@@ -9,7 +9,6 @@ function SwitchSource({ switchSource }: any) {
     const [source] = useState([
         { id: 1, name: 'wallhaven' },
         { id: 2, name: 'konachan' },
-        { id: 3, name: 'anime-pictures' },
     ]);
     const { setCurrentSource, currentSource } = useSource();
     const clickHandle = (source: any) => {
