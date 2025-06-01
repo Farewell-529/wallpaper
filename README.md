@@ -1,4 +1,4 @@
-# 🌄 Wallpaper 壁纸网站
+# 🌄 Wallpeek 壁纸网站
 
 > 一个基于 React + Express.js 的高颜值壁纸网站，整合 Wallhaven 和 Konachan等壁纸源。
 ![image](https://github.com/user-attachments/assets/ce097284-2157-4856-a876-8ebc328e20d4)
